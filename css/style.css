@@ -468,7 +468,7 @@ section header {
   z-index: 1;
 }
 
-#header-subtitle {
+.header-subtitle {
   display: flex;
   align-items: center;
   backdrop-filter: blur(20px);
@@ -478,21 +478,39 @@ section header {
   border-radius: 24px;
   margin-bottom: 20px;
 }
-
-#header-title {
+@media (max-width: 768px) {
+  .header-subtitle {
+    font-size: 1.1rem;
+  }
+}
+.header-title {
   margin-bottom: 20px;
 }
-
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.75rem;
+  }
+}
 .header-home p {
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
 /* main player*/
+.main-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .audio-player {
   background-color: var(--secondary-background-color);
-
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .audio-player {
+    width: 95%;
+    margin: 0 10px;
+  }
 }
 
 .song-meta-data .song-name,
@@ -726,6 +744,7 @@ section header {
   border-radius: 12px;
   height: 100%;
 }
+
 .services-list .services-item h4 {
   font-size: 24px;
   margin: 10px 0;
@@ -765,6 +784,11 @@ section header {
   margin: 0;
   padding: 10px;
   color: var(--link-color);
+}
+@media (max-width: 991px) {
+  .title {
+    font-size: 1.5rem;
+  }
 }
 .title::after {
   content: "";
@@ -860,11 +884,7 @@ section header {
   font-size: 14px;
   color: #fff;
 }
-@media (max-width: 991px) {
-  .team-card {
-    margin-bottom: 20px;
-  }
-}
+
 /* Start Services */
 .services,
 .feat {
@@ -1012,6 +1032,11 @@ section header {
 .popular-desc {
   margin-right: 15px;
 }
+@media (max-width: 991px) {
+  .popular-desc h4 {
+    font-size: 14px;
+  }
+}
 .popular-desc p {
   color: #c3c3c3;
 }
@@ -1024,7 +1049,28 @@ section header {
   font-size: 14px;
   font-weight: 400;
 }
-
+.popular-data {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 10px;
+  gap: 35px;
+}
+.popular-date {
+  display: flex;
+}
+.popular-data .popular-date img {
+  width: 25px;
+}
+@media (max-width: 991px) {
+  .popular-data .popular-date img {
+    width: 20px;
+  }
+  .popular-data {
+    gap: 0px;
+    justify-content: space-around;
+  }
+}
 /* Start Testim */
 .testim-content {
   display: flex;

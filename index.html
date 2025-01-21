@@ -125,41 +125,31 @@
       </div>
     </nav>
 
-    <section class="header-home" aria-labelledby="header-title">
-      <!-- فيديو الخلفية -->
+    <!-- Header -->
+    <section class="header-home section">
       <video class="background-video" autoplay muted loop>
         <source src="./img/background/1.mp4" type="video/mp4" />
-        <!-- نص بديل إذا لم يدعم المتصفح الفيديو -->
         متصفحك لا يدعم تشغيل الفيديو.
       </video>
       <!-- Overlay -->
       <div class="video-overlay"></div>
-      <!-- محتوى الهيدر -->
       <div class="container">
         <div class="row">
-          <div class="col-md-9">
-            <!-- عنوان فرعي للقسم -->
+          <div class="col-md-12">
             <div class="sub-title">
-              <i aria-hidden="true"></i>
-              <h5 id="header-subtitle">
+              <h5 class="header-subtitle">
                 اكتشف متعة الاستماع مع أفضل بودكاستاتنا الحصرية
               </h5>
             </div>
-
-            <!-- العنوان الرئيسي للهيدر -->
-            <h2 id="header-title">
+            <h2 class="header-title">
               نحن هنا لنروي قصصًا استثنائية وملهمة، ونبني جسورًا جديدة من
               الإبداع والتواصل.
             </h2>
-
-            <!-- وصف القسم -->
             <p>
               سواء كنت مستمعًا شغوفًا، صانع محتوى طموحًا، أو باحثًا عن خدمة
               صوتية مميزة،
               <strong>حنجرة</strong> هي مكانك الملهم حيث تلتقي الأصوات بالمعنى.
             </p>
-
-            <!-- أزرار الإجراءات الرئيسية -->
             <div class="buttons-group d-flex align-items-center gap-3">
               <a
                 href="/listen"
@@ -181,202 +171,213 @@
       </div>
     </section>
 
+    <!-- Fixed Player -->
     <div class="main-player">
-      <div class="audio-player">
-        <button type="button" class="audio-player-hide">
-          <i class="fa-solid fa-angle-down"></i>
-        </button>
-        <div class="player">
-          <div class="player-cover-img">
-            <img
-              data-amplitude-song-info="cover_art_url"
-              src="img/audio/01.jpg"
-              alt="الغلاف"
-            />
-          </div>
-          <div class="player-content">
-            <div class="song-meta-data">
-              <div class="d-flex flex-column gap-2">
-                <!-- أيقونة الموسيقى بجانب اسم الحلقة -->
-                <div class="d-flex align-items-center gap-2">
-                  <i class="fa-solid fa-music"></i>
-                  <p data-amplitude-song-info="name" class="song-name">
-                    حلقة يا حب البرغل
-                  </p>
-                </div>
-                <p>
-                  <span data-amplitude-song-info="album" class="album-name">
-                    بودكاست اللويح</span
-                  >
-                  -
-                  <span data-amplitude-song-info="artist" class="song-artist">
-                    عمار أبو حسين</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="player-time-progress">
-              <div id="progress-container">
-                <input type="range" class="amplitude-song-slider" />
-                <progress
-                  id="song-played-progress"
-                  class="amplitude-song-played-progress"
-                  value="0"
-                ></progress>
-                <progress
-                  id="song-buffered-progress"
-                  class="amplitude-buffered-progress"
-                  value="0.608827378266668"
-                ></progress>
-              </div>
-              <div class="time-container">
-                <span class="current-time">
-                  <span class="amplitude-current-minutes">00</span>:<span
-                    class="amplitude-current-seconds"
-                    >00</span
-                  >
-                </span>
-                <div
-                  id="player-volume"
-                  class="player-volume"
-                  style="--volume-before-width: 50%"
-                >
-                  <!-- تم استبدال fas fa-volume-up بـ fa-solid fa-volume-high -->
-                  <span
-                    id="amplitude-mute"
-                    class="amplitude-mute amplitude-not-muted"
-                  >
-                    <i class="fa-solid fa-volume-high"></i>
-                  </span>
-                  <input
-                    type="range"
-                    id="volume-slider"
-                    max="100"
-                    class="amplitude-volume-slider"
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="audio-player">
+              <button type="button" class="audio-player-hide">
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="player">
+                <div class="player-cover-img">
+                  <img
+                    data-amplitude-song-info="cover_art_url"
+                    src="img/audio/01.jpg"
+                    alt="الغلاف"
                   />
                 </div>
-                <span class="duration">
-                  <span class="amplitude-duration-minutes">02</span>:<span
-                    class="amplitude-duration-seconds"
-                    >41</span
+                <div class="player-content">
+                  <div class="song-meta-data">
+                    <div class="d-flex flex-column gap-2">
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-music"></i>
+                        <p data-amplitude-song-info="name" class="song-name">
+                          حلقة يا حب البرغل
+                        </p>
+                      </div>
+                      <p>
+                        <span
+                          data-amplitude-song-info="album"
+                          class="album-name"
+                        >
+                          بودكاست اللويح</span
+                        >
+                        -
+                        <span
+                          data-amplitude-song-info="artist"
+                          class="song-artist"
+                        >
+                          عمار أبو حسين</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="player-time-progress">
+                    <div id="progress-container">
+                      <input type="range" class="amplitude-song-slider" />
+                      <progress
+                        id="song-played-progress"
+                        class="amplitude-song-played-progress"
+                        value="0"
+                      ></progress>
+                      <progress
+                        id="song-buffered-progress"
+                        class="amplitude-buffered-progress"
+                        value="0.608827378266668"
+                      ></progress>
+                    </div>
+                    <div class="time-container">
+                      <span class="current-time">
+                        <span class="amplitude-current-minutes">00</span>:<span
+                          class="amplitude-current-seconds"
+                          >00</span
+                        >
+                      </span>
+                      <div
+                        id="player-volume"
+                        class="player-volume"
+                        style="--volume-before-width: 50%"
+                      >
+                        <span
+                          id="amplitude-mute"
+                          class="amplitude-mute amplitude-not-muted"
+                        >
+                          <i class="fa-solid fa-volume-high"></i>
+                        </span>
+                        <input
+                          type="range"
+                          id="volume-slider"
+                          max="100"
+                          class="amplitude-volume-slider"
+                        />
+                      </div>
+                      <span class="duration">
+                        <span class="amplitude-duration-minutes">02</span>:<span
+                          class="amplitude-duration-seconds"
+                          >41</span
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="player-controls">
+                  <div
+                    class="amplitude-shuffle amplitude-shuffle-off"
+                    id="shuffle"
                   >
-                </span>
+                    <i class="fa-solid fa-shuffle"></i>
+                  </div>
+                  <div class="amplitude-prev" id="previous">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </div>
+                  <div
+                    class="amplitude-play-pause amplitude-paused"
+                    id="play-pause"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div class="amplitude-next" id="next">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </div>
+                  <div
+                    class="amplitude-repeat amplitude-repeat-off"
+                    id="repeat"
+                  >
+                    <i class="fa-solid fa-repeat"></i>
+                  </div>
+                  <div class="player-playlist show-playlist">
+                    <i class="fa-solid fa-music"></i>
+                  </div>
+                </div>
+                <div id="playlist-container">
+                  <div class="playlist-top">
+                    <h6 class="up-next">القادم</h6>
+                    <button type="button" class="close-playlist">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <div class="playlist-content">
+                    <div class="playlist-item">
+                      <div
+                        class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused amplitude-active-song-container"
+                        data-amplitude-song-index="0"
+                      >
+                        <img src="img/audio/01.jpg" alt="" />
+                        <div class="playlist-song-meta">
+                          <span class="playlist-song-name"
+                            >بودكاست الأعمال الحلقة 01</span
+                          >
+                          <span class="playlist-artist-album"
+                            >تيموثي ك. أغيلار</span
+                          >
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="playlist-remove"
+                        data-remove-id="d1"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                    <div class="playlist-item">
+                      <div
+                        class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused"
+                        data-amplitude-song-index="1"
+                      >
+                        <img src="img/audio/02.jpg" alt="" />
+                        <div class="playlist-song-meta">
+                          <span class="playlist-song-name"
+                            >بودكاست التعليم الحلقة 02</span
+                          >
+                          <span class="playlist-artist-album"
+                            >دونا سي. نيكولز</span
+                          >
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="playlist-remove"
+                        data-remove-id="d2"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                    <div class="playlist-item">
+                      <div
+                        class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused"
+                        data-amplitude-song-index="2"
+                      >
+                        <img src="img/audio/03.jpg" alt="" />
+                        <div class="playlist-song-meta">
+                          <span class="playlist-song-name"
+                            >بودكاست الأعمال الحلقة 03</span
+                          >
+                          <span class="playlist-artist-album"
+                            >ألفين ك. بيفريدج</span
+                          >
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="playlist-remove"
+                        data-remove-id="d3"
+                      >
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="player-controls">
-            <!-- تم استبدال far fa-shuffle بـ fa-solid fa-shuffle -->
-            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle">
-              <i class="fa-solid fa-shuffle"></i>
-            </div>
-            <!-- تم استبدال fas fa-backward-step بـ fa-solid fa-backward-step -->
-            <div class="amplitude-prev" id="previous">
-              <i class="fa-solid fa-backward-step"></i>
-            </div>
-            <!-- تم استبدال fas fa-play بـ fa-solid fa-play -->
-            <div class="amplitude-play-pause amplitude-paused" id="play-pause">
-              <i class="fa-solid fa-play"></i>
-            </div>
-            <!-- تم استبدال fas fa-forward-step بـ fa-solid fa-forward-step -->
-            <div class="amplitude-next" id="next">
-              <i class="fa-solid fa-forward-step"></i>
-            </div>
-            <!-- تم استبدال far fa-repeat بـ fa-solid fa-repeat -->
-            <div class="amplitude-repeat amplitude-repeat-off" id="repeat">
-              <i class="fa-solid fa-repeat"></i>
-            </div>
-            <!-- تم استبدال far fa-list-music (غير مجاني) بـ fa-solid fa-music (مجاني) -->
-            <div class="player-playlist show-playlist">
-              <i class="fa-solid fa-music"></i>
-            </div>
-          </div>
-
-          <!-- قائمة التشغيل -->
-          <div id="playlist-container">
-            <div class="playlist-top">
-              <h6 class="up-next">القادم</h6>
-              <!-- تم استبدال far fa-xmark بـ fa-solid fa-xmark -->
-              <button type="button" class="close-playlist">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-
-            <!-- عناصر قائمة التشغيل -->
-            <div class="playlist-content">
-              <div class="playlist-item">
-                <div
-                  class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused amplitude-active-song-container"
-                  data-amplitude-song-index="0"
-                >
-                  <img src="img/audio/01.jpg" alt="" />
-                  <div class="playlist-song-meta">
-                    <span class="playlist-song-name"
-                      >بودكاست الأعمال الحلقة 01</span
-                    >
-                    <span class="playlist-artist-album">تيموثي ك. أغيلار</span>
-                  </div>
-                </div>
-                <!-- تم استبدال far fa-xmark بـ fa-solid fa-xmark -->
-                <button
-                  type="button"
-                  class="playlist-remove"
-                  data-remove-id="d1"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-
-              <div class="playlist-item">
-                <div
-                  class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused"
-                  data-amplitude-song-index="1"
-                >
-                  <img src="img/audio/02.jpg" alt="" />
-                  <div class="playlist-song-meta">
-                    <span class="playlist-song-name"
-                      >بودكاست التعليم الحلقة 02</span
-                    >
-                    <span class="playlist-artist-album">دونا سي. نيكولز</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="playlist-remove"
-                  data-remove-id="d2"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-
-              <div class="playlist-item">
-                <div
-                  class="playlist-song amplitude-song-container amplitude-play-pause amplitude-paused"
-                  data-amplitude-song-index="2"
-                >
-                  <img src="img/audio/03.jpg" alt="" />
-                  <div class="playlist-song-meta">
-                    <span class="playlist-song-name"
-                      >بودكاست الأعمال الحلقة 03</span
-                    >
-                    <span class="playlist-artist-album">ألفين ك. بيفريدج</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="playlist-remove"
-                  data-remove-id="d3"
-                >
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- نهاية قائمة التشغيل -->
         </div>
       </div>
     </div>
 
+    <!-- Services -->
     <section class="our-services bg-light">
       <div class="container">
         <div class="row">
@@ -393,7 +394,7 @@
           </div>
           <div class="services-list">
             <div class="row">
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="services-item bg-dark">
                   <div class="icon">
                     <img src="./img/services/feat-05.png" alt="" />
@@ -410,7 +411,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="services-item bg-dark">
                   <div class="icon">
                     <img src="./img/services/feat-05.png" alt="" />
@@ -427,7 +428,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="services-item bg-dark">
                   <div class="icon">
                     <img src="./img/services/feat-05.png" alt="" />
@@ -450,6 +451,7 @@
       </div>
     </section>
 
+    <!-- Most Listened -->
     <section
       class="most-listened section bg-dark"
       aria-labelledby="most-listened-title"
@@ -667,6 +669,7 @@
       </div>
     </section>
 
+    <!-- New Added -->
     <section
       class="our-suggestions section"
       aria-labelledby="suggestions-title"
@@ -684,46 +687,116 @@
               </a>
             </header>
           </div>
-          <div class="col-md-12">
-            <div class="owl-suggestions owl-carousel owl-theme">
-              <div class="content">
-                <img
-                  src="img/video-img.png"
-                  alt="غلاف بودكاست اللويح 2 - التراث الفلسطيني"
-                  loading="lazy"
-                />
-                <div class="title-card">
-                  <span>فنجان / ثمانية</span>
-                  <h5>حكاية حلقة ياسر</h5>
+          <div class="col-md-4 col-12 mb-4">
+            <div class="content">
+              <img src="img/video-img.png" loading="lazy" width="100%" />
+              <div class="title-card">
+                <span>فنجان / ثمانية</span>
+                <h5>حكاية حلقة ياسر</h5>
+              </div>
+              <div class="content-info d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/content-creator-icon.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">ياسر الحزيمي</p>
                 </div>
-                <div class="content-info d-flex justify-content-between">
-                  <div class="d-flex justify-content-between">
-                    <img
-                      src="./img/content-creator-icon.png"
-                      style="width: 20px"
-                      alt="img"
-                    />
-                    <p class="ms-2">ياسر الحزيمي</p>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <img
-                      src="./img/data-date.png"
-                      style="width: 20px"
-                      alt="img"
-                    />
-                    <p class="ms-2">21 ديسمبر 2024</p>
-                  </div>
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/data-date.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">21 ديسمبر 2024</p>
                 </div>
-                <hr />
-                <div class="content-activity d-flex justify-content-between">
-                  <div class="d-flex justify-content-between">
-                    <img src="./img/eye.png" style="width: 100%" alt="img" />
-                    <p class="ms-2">2.5K</p>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <img src="./img/heart.png" style="width: 100%" alt="img" />
-                    <p class="ms-2">1.4K</p>
-                  </div>
+              </div>
+              <hr />
+              <div class="content-activity d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img src="./img/eye.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">2.5K</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <img src="./img/heart.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">1.4K</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4">
+            <div class="content">
+              <img src="img/video-img.png" loading="lazy" width="100%" />
+              <div class="title-card">
+                <span>فنجان / ثمانية</span>
+                <h5>حكاية حلقة ياسر</h5>
+              </div>
+              <div class="content-info d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/content-creator-icon.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">ياسر الحزيمي</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/data-date.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">21 ديسمبر 2024</p>
+                </div>
+              </div>
+              <hr />
+              <div class="content-activity d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img src="./img/eye.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">2.5K</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <img src="./img/heart.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">1.4K</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4">
+            <div class="content">
+              <img src="img/video-img.png" loading="lazy" width="100%" />
+              <div class="title-card">
+                <span>فنجان / ثمانية</span>
+                <h5>حكاية حلقة ياسر</h5>
+              </div>
+              <div class="content-info d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/content-creator-icon.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">ياسر الحزيمي</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <img
+                    src="./img/data-date.png"
+                    style="width: 20px"
+                    alt="img"
+                  />
+                  <p class="ms-2">21 ديسمبر 2024</p>
+                </div>
+              </div>
+              <hr />
+              <div class="content-activity d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <img src="./img/eye.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">2.5K</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <img src="./img/heart.png" style="width: 100%" alt="img" />
+                  <p class="ms-2">1.4K</p>
                 </div>
               </div>
             </div>
@@ -732,6 +805,7 @@
       </div>
     </section>
 
+    <!-- Blog -->
     <section class="blog section bg-dark">
       <div class="container">
         <div class="row">
@@ -748,7 +822,7 @@
           </div>
           <div class="blog-content">
             <div class="row">
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="blog-item">
                   <div class="image-container">
                     <img src="./img/blog-01.jpg" alt="img" />
@@ -764,7 +838,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="blog-item">
                   <div class="image-container">
                     <img src="./img/blog-01.jpg" alt="img" />
@@ -780,7 +854,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-4 col-12 my-4">
                 <div class="blog-item">
                   <div class="image-container">
                     <img src="./img/blog-01.jpg" alt="img" />
@@ -802,6 +876,7 @@
       </div>
     </section>
 
+    <!-- Popular -->
     <div class="popular section bg-dark">
       <div class="container">
         <div class="row">
@@ -827,17 +902,17 @@
                     <div class="popular-desc">
                       <h4>كيف تنجح العلاقات مع ياسر الحزيمي</h4>
                       <p class="my-2">اللويح</p>
-                      <div class="d-flex mt-3 gap-5">
+                      <div class="popular-data">
                         <div>
                           <span class="custom-badge">حواري</span>
                         </div>
-                        <div class="d-flex">
+                        <div class="popular-date">
                           <img
                             src="./img/data-date.png"
                             style="width: 24x"
                             alt="img"
                           />
-                          <p class="ms-2">21 ديسمبر 2024</p>
+                          <span class="ms-2">21 ديسمبر 2024</span>
                         </div>
                       </div>
                     </div>
@@ -858,17 +933,17 @@
                     <div class="popular-desc">
                       <h4>كيف تنجح العلاقات مع ياسر الحزيمي</h4>
                       <p class="my-2">اللويح</p>
-                      <div class="d-flex mt-3 gap-5">
+                      <div class="popular-data">
                         <div>
                           <span class="custom-badge">حواري</span>
                         </div>
-                        <div class="d-flex">
+                        <div class="popular-date">
                           <img
                             src="./img/data-date.png"
                             style="width: 24x"
                             alt="img"
                           />
-                          <p class="ms-2">21 ديسمبر 2024</p>
+                          <span class="ms-2">21 ديسمبر 2024</span>
                         </div>
                       </div>
                     </div>
@@ -889,17 +964,17 @@
                     <div class="popular-desc">
                       <h4>كيف تنجح العلاقات مع ياسر الحزيمي</h4>
                       <p class="my-2">اللويح</p>
-                      <div class="d-flex mt-3 gap-5">
+                      <div class="popular-data">
                         <div>
                           <span class="custom-badge">حواري</span>
                         </div>
-                        <div class="d-flex">
+                        <div class="popular-date">
                           <img
                             src="./img/data-date.png"
                             style="width: 24x"
                             alt="img"
                           />
-                          <p class="ms-2">21 ديسمبر 2024</p>
+                          <span class="ms-2">21 ديسمبر 2024</span>
                         </div>
                       </div>
                     </div>
@@ -917,6 +992,7 @@
       </div>
     </div>
 
+    <!-- Customers -->
     <div class="customers section bg-dark">
       <div class="container">
         <div class="row">
@@ -928,22 +1004,22 @@
             </header>
             <div class="customers-logos">
               <div class="row">
-                <div class="col-md-3 col-12">
+                <div class="col-3">
                   <div class="customer-logo">
                     <img src="./img/customers-logo-01.png" alt="img" />
                   </div>
                 </div>
-                <div class="col-md-3 col-12">
+                <div class="col-3">
                   <div class="customer-logo">
                     <img src="./img/customers-logo-01.png" alt="img" />
                   </div>
                 </div>
-                <div class="col-md-3 col-12">
+                <div class="col-3">
                   <div class="customer-logo">
                     <img src="./img/customers-logo-01.png" alt="img" />
                   </div>
                 </div>
-                <div class="col-md-3 col-12">
+                <div class="col-3">
                   <div class="customer-logo">
                     <img src="./img/customers-logo-01.png" alt="img" />
                   </div>
@@ -955,6 +1031,7 @@
       </div>
     </div>
 
+    <!-- Blog -->
     <section
       class="our-suggestions section"
       aria-labelledby="suggestions-title"
@@ -972,50 +1049,138 @@
               </a>
             </header>
           </div>
-          <div class="col-md-12" style="border-radius: 12px">
-            <div class="owl-suggestions owl-carousel owl-theme">
-              <div class="content">
-                <img
-                  src="img/blog-02.jpg"
-                  alt="غلاف بودكاست اللويح 2 - التراث الفلسطيني"
-                  loading="lazy"
-                />
-                <div class="title-card">
-                  <h5 class="mb-3">أهم أدوات تسجيل البودكاست للمبتدئين</h5>
-                  <p style="color: #dcd7e8">
-                    اكتشف أفضل المعدات التي تحتاجها لتسجيل بودكاست بجودة عالية
-                    وبأسعار معقولة.
-                  </p>
-                </div>
-                <hr />
-                <div class="content-info">
-                  <div class="d-flex justify-content-between">
-                    <div class="d-flex">
-                      <img
-                        src="./img/data-date.png"
-                        style="width: 20px"
-                        alt="img"
-                      />
-                      <p class="ms-2">30 ديسمبر 2024</p>
-                    </div>
-                    <div class="d-flex">
-                      <img src="./img/time.png" style="width: 20px" alt="img" />
-                      <p class="ms-2">02:00 pm</p>
-                    </div>
-                  </div>
-                  <a
-                    href="#"
-                    class="btn mt-4"
-                    style="border: 1px solid #caa43e; color: #eee"
-                  >
-                    اقرأ المزيد
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div class="content">
+              <img
+                src="img/blog-02.jpg"
+                alt="غلاف بودكاست اللويح 2 - التراث الفلسطيني"
+                loading="lazy"
+              />
+              <div class="title-card">
+                <h5 class="mb-3">أهم أدوات تسجيل البودكاست للمبتدئين</h5>
+                <p style="color: #dcd7e8">
+                  اكتشف أفضل المعدات التي تحتاجها لتسجيل بودكاست بجودة عالية
+                  وبأسعار معقولة.
+                </p>
+              </div>
+              <hr />
+              <div class="content-info">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
                     <img
-                      src="./img/right-icon.png"
+                      src="./img/data-date.png"
+                      style="width: 20px"
                       alt="img"
-                      style="width: 10px"
                     />
-                  </a>
+                    <p class="ms-2">30 ديسمبر 2024</p>
+                  </div>
+                  <div class="d-flex">
+                    <img src="./img/time.png" style="width: 20px" alt="img" />
+                    <p class="ms-2">02:00 pm</p>
+                  </div>
                 </div>
+                <a
+                  href="#"
+                  class="btn mt-4"
+                  style="border: 1px solid #caa43e; color: #eee"
+                >
+                  اقرأ المزيد
+                  <img
+                    src="./img/right-icon.png"
+                    alt="img"
+                    style="width: 10px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div class="content">
+              <img
+                src="img/blog-02.jpg"
+                alt="غلاف بودكاست اللويح 2 - التراث الفلسطيني"
+                loading="lazy"
+              />
+              <div class="title-card">
+                <h5 class="mb-3">أهم أدوات تسجيل البودكاست للمبتدئين</h5>
+                <p style="color: #dcd7e8">
+                  اكتشف أفضل المعدات التي تحتاجها لتسجيل بودكاست بجودة عالية
+                  وبأسعار معقولة.
+                </p>
+              </div>
+              <hr />
+              <div class="content-info">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      src="./img/data-date.png"
+                      style="width: 20px"
+                      alt="img"
+                    />
+                    <p class="ms-2">30 ديسمبر 2024</p>
+                  </div>
+                  <div class="d-flex">
+                    <img src="./img/time.png" style="width: 20px" alt="img" />
+                    <p class="ms-2">02:00 pm</p>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn mt-4"
+                  style="border: 1px solid #caa43e; color: #eee"
+                >
+                  اقرأ المزيد
+                  <img
+                    src="./img/right-icon.png"
+                    alt="img"
+                    style="width: 10px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div class="content">
+              <img
+                src="img/blog-02.jpg"
+                alt="غلاف بودكاست اللويح 2 - التراث الفلسطيني"
+                loading="lazy"
+              />
+              <div class="title-card">
+                <h5 class="mb-3">أهم أدوات تسجيل البودكاست للمبتدئين</h5>
+                <p style="color: #dcd7e8">
+                  اكتشف أفضل المعدات التي تحتاجها لتسجيل بودكاست بجودة عالية
+                  وبأسعار معقولة.
+                </p>
+              </div>
+              <hr />
+              <div class="content-info">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                    <img
+                      src="./img/data-date.png"
+                      style="width: 20px"
+                      alt="img"
+                    />
+                    <p class="ms-2">30 ديسمبر 2024</p>
+                  </div>
+                  <div class="d-flex">
+                    <img src="./img/time.png" style="width: 20px" alt="img" />
+                    <p class="ms-2">02:00 pm</p>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn mt-4"
+                  style="border: 1px solid #caa43e; color: #eee"
+                >
+                  اقرأ المزيد
+                  <img
+                    src="./img/right-icon.png"
+                    alt="img"
+                    style="width: 10px"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -1023,6 +1188,7 @@
       </div>
     </section>
 
+    <!-- Discussion -->
     <section
       class="our-suggestions section bg-dark"
       aria-labelledby="suggestions-title"
@@ -1040,48 +1206,96 @@
               </a>
             </header>
           </div>
-          <div class="col-md-12" style="border-radius: 12px">
-            <div class="owl-suggestions owl-carousel owl-theme">
-              <div
-                class="content"
-                style="
-                  background-image: url(./img/suggest-01.jpg);
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                  height: 400px;
-                  display: flex;
-                  justify-content: center;
-                  flex-direction: column;
-                  padding: 15px;
-                "
-              >
-                <h5 class="mb-3">بودكاست حواري</h5>
-                <p style="color: #dcd7e8">
-                  يتضمن مقابلات أو نقاشات مع شخصيات مميزة حول موضوعات متنوعة
-                </p>
-                <a href="#" class="btn btn-secondary my-4">
-                  ابدأ الاستماع
-                  <img
-                    src="./img/right-icon.png"
-                    alt="img"
-                    style="width: 10px"
-                  />
-                </a>
-              </div>
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div
+              class="content"
+              style="
+                background-image: url(./img/suggest-01.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 15px;
+              "
+            >
+              <h5 class="mb-3">بودكاست حواري</h5>
+              <p style="color: #dcd7e8">
+                يتضمن مقابلات أو نقاشات مع شخصيات مميزة حول موضوعات متنوعة
+              </p>
+              <a href="#" class="btn btn-secondary my-4">
+                ابدأ الاستماع
+                <img src="./img/right-icon.png" alt="img" style="width: 10px" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div
+              class="content"
+              style="
+                background-image: url(./img/suggest-01.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 15px;
+              "
+            >
+              <h5 class="mb-3">بودكاست حواري</h5>
+              <p style="color: #dcd7e8">
+                يتضمن مقابلات أو نقاشات مع شخصيات مميزة حول موضوعات متنوعة
+              </p>
+              <a href="#" class="btn btn-secondary my-4">
+                ابدأ الاستماع
+                <img src="./img/right-icon.png" alt="img" style="width: 10px" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4" style="border-radius: 12px">
+            <div
+              class="content"
+              style="
+                background-image: url(./img/suggest-01.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 15px;
+              "
+            >
+              <h5 class="mb-3">بودكاست حواري</h5>
+              <p style="color: #dcd7e8">
+                يتضمن مقابلات أو نقاشات مع شخصيات مميزة حول موضوعات متنوعة
+              </p>
+              <a href="#" class="btn btn-secondary my-4">
+                ابدأ الاستماع
+                <img src="./img/right-icon.png" alt="img" style="width: 10px" />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Statistics -->
     <div class="customers section bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="customers-logos">
               <div class="row">
-                <div class="col-md-3 col-12" style="text-align: center">
+                <div
+                  class="col-md-3 col-6 mb-3 mb-sm-3"
+                  style="text-align: center"
+                >
                   <div class="customer-logo">
                     <div
                       class="d-flex align-items-center justify-content-center"
@@ -1093,7 +1307,10 @@
                     <h3>مستمع</h3>
                   </div>
                 </div>
-                <div class="col-md-3 col-12" style="text-align: center">
+                <div
+                  class="col-md-3 col-6 mb-3 mb-sm-3"
+                  style="text-align: center"
+                >
                   <div class="customer-logo">
                     <div
                       class="d-flex align-items-center justify-content-center"
@@ -1105,7 +1322,7 @@
                     <h3>مقدم</h3>
                   </div>
                 </div>
-                <div class="col-md-3 col-12" style="text-align: center">
+                <div class="col-md-3 col-6" style="text-align: center">
                   <div class="customer-logo">
                     <div
                       class="d-flex align-items-center justify-content-center"
@@ -1117,7 +1334,7 @@
                     <h3>مقدم</h3>
                   </div>
                 </div>
-                <div class="col-md-3 col-12" style="text-align: center">
+                <div class="col-md-3 col-6" style="text-align: center">
                   <div class="customer-logo">
                     <div
                       class="d-flex align-items-center justify-content-center"
@@ -1137,7 +1354,7 @@
     </div>
 
     <!-- Start Team -->
-    <section class="team section text-bg-dark">
+    <section class="team section bg-dark">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -1179,10 +1396,10 @@
     <div class="testim section bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-12 mb-5">
             <h1 class="text-center title">ما يقولوا عنا</h1>
           </div>
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 mb-4">
             <div class="testim-content">
               <p>
                 ”لقد استخدمت خدمة استضافة الويب هذه لأكثر من عام وأنا معجب حقًا
@@ -1195,7 +1412,7 @@
               <p>مطور مواقع</p>
             </div>
           </div>
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 mb-4">
             <div class="testim-content">
               <p>
                 ”لقد استخدمت خدمة استضافة الويب هذه لأكثر من عام وأنا معجب حقًا
@@ -1208,7 +1425,7 @@
               <p>مطور مواقع</p>
             </div>
           </div>
-          <div class="col-md-4 col-12">
+          <div class="col-md-4 col-12 mb-4">
             <div class="testim-content">
               <p>
                 ”لقد استخدمت خدمة استضافة الويب هذه لأكثر من عام وأنا معجب حقًا
