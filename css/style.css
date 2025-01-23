@@ -1137,3 +1137,36 @@ section header {
   background-color: #caa43e;
   color: #17111c;
 }
+/* Voices */
+.search-container .search-input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-color-1);
+  background-color: transparent;
+}
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-container .search-input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  caret-color: #fff;
+  color: #fff;
+}
+.search-container .search-input::placeholder {
+  padding-right: 20px !important;
+  color: #fff;
+}
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  pointer-events: none;
+  color: #fff;
+  font-size: 20px;
+}
