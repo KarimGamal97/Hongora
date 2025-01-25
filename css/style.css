@@ -142,7 +142,9 @@ p {
   font-size: 2.5rem;
   padding: 0 30px;
 }
-
+.gold {
+  color: var(--link-color) !important;
+}
 .big-title::after {
   content: "";
   width: fit-content;
@@ -1151,7 +1153,7 @@ section header {
 
 .search-container .search-input {
   width: 100%;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
   border-radius: 12px;
   caret-color: #fff;
   color: #fff;
@@ -1169,4 +1171,112 @@ section header {
   pointer-events: none;
   color: #fff;
   font-size: 20px;
+}
+.aside-menu {
+  border-radius: 12px;
+}
+.aside-menu .custom-checkbox input {
+  margin-bottom: 20px;
+  border-radius: 1.25em !important;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+.voice-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+.voice-card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.voice-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+.voice-card p {
+  font-size: 14px;
+}
+/* Sounds */
+
+.sounds-menu img {
+  border-radius: 50%;
+  width: 150px;
+  margin-bottom: 15px;
+}
+.sounds-menu h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.sounds-menu p {
+  font-size: 14px;
+  color: #dcd7e8;
+}
+.sound-card {
+  background-color: var(--secondary-background-color);
+  padding: 20px;
+  border-radius: 12px;
+  margin-left: 20px;
+  height: 45vh;
+  margin-bottom: 15px;
+}
+.sound-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.sound-card p {
+  font-size: 14px;
+  color: #dcd7e8;
+  margin-bottom: 10px;
+}
+/* News */
+.news-parent .image-news {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  color: #fff;
+  position: relative;
+  height: 50vh;
+  border-radius: 12px;
+}
+.news-parent .image-news span,
+h5,
+p {
+  position: absolute;
+}
+.news-parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 3px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+  grid-area: 1 / 4 / 3 / 7;
+}
+.div3 {
+  grid-area: 2 / 1 / 5 / 7;
+}
+.div4 {
+  grid-area: 1 / 7 / 5 / 13;
+}
+.div8 {
+  grid-area: 5 / 1 / 9 / 7;
+}
+.div6 {
+  grid-area: 5 / 10 / 7 / 13;
+}
+.div7 {
+  grid-area: 5 / 7 / 7 / 10;
+}
+.div5 {
+  grid-area: 7 / 7 / 9 / 13;
 }
