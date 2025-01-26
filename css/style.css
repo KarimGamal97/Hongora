@@ -1322,3 +1322,32 @@ section header {
   height: 80%;
   border-radius: 12px;
 }
+/* Tools */
+.tools .tools-box {
+  border-radius: 12px;
+  background-color: #1c1620;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.tools .tools-box img {
+  width: 50px;
+  margin-bottom: 12px;
+}
+.tools .tools-box h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.tools .tools-box p {
+  font-size: 14px;
+}
+
+.rent-form form .form-group input {
+  background-color: var(--secondary-background-color);
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff;
+  border: 1px solid #c0c0c0;
+}
